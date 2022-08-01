@@ -129,7 +129,7 @@
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/nasa/bingo" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+          <a class="nav-link" href="https://github.com/nightdr/bingo/tree/stronglyTyped" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
@@ -880,7 +880,7 @@ finished generating population
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Generation: 0, Best fitness: 779.3525611773331
+Generation: 0, Best fitness: 1196.185669124851
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
@@ -892,6 +892,8 @@ C:\Users\David\Desktop\GPSR Research\bingoNASAFork\bingo\symbolic_regression\agr
   return np.exp(forward_eval[param1])
 C:\Users\David\Desktop\GPSR Research\bingoNASAFork\bingo\symbolic_regression\agraph\evaluation_backend\operator_eval.py:95: RuntimeWarning: overflow encountered in true_divide
   reverse_eval[param2] -= reverse_eval[reverse_index] *\
+C:\Users\David\Desktop\GPSR Research\bingoNASAFork\bingo\symbolic_regression\agraph\evaluation_backend\operator_eval.py:78: RuntimeWarning: overflow encountered in multiply
+  return forward_eval[param1] * forward_eval[param2]
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
@@ -899,8 +901,8 @@ C:\Users\David\Desktop\GPSR Research\bingoNASAFork\bingo\symbolic_regression\agr
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Generation: 10, Best fitness: 775.7702246951956
-Generation: 20, Best fitness: 775.7702246951956
+Generation: 10, Best fitness: 879.963063122315
+Generation: 20, Best fitness: 357.58918621567597
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
@@ -908,14 +910,8 @@ Generation: 20, Best fitness: 775.7702246951956
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-C:\Users\David\Desktop\GPSR Research\bingoNASAFork\bingo\symbolic_regression\agraph\evaluation_backend\operator_eval.py:78: RuntimeWarning: overflow encountered in multiply
-  return forward_eval[param1] * forward_eval[param2]
-C:\Users\David\Desktop\GPSR Research\bingoNASAFork\bingo\symbolic_regression\agraph\evaluation_backend\operator_eval.py:89: RuntimeWarning: overflow encountered in true_divide
-  return forward_eval[param1] / forward_eval[param2]
 C:\Users\David\Desktop\GPSR Research\bingoNASAFork\bingo\symbolic_regression\agraph\evaluation_backend\operator_eval.py:94: RuntimeWarning: overflow encountered in true_divide
   reverse_eval[param1] += reverse_eval[reverse_index] / forward_eval[param2]
-C:\Users\David\Desktop\GPSR Research\bingoNASAFork\bingo\symbolic_regression\agraph\evaluation_backend\operator_eval.py:95: RuntimeWarning: overflow encountered in multiply
-  reverse_eval[param2] -= reverse_eval[reverse_index] *\
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
@@ -923,13 +919,50 @@ C:\Users\David\Desktop\GPSR Research\bingoNASAFork\bingo\symbolic_regression\agr
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Generation: 30, Best fitness: 775.7702246951956
-Generation: 40, Best fitness: 775.7702246951956
-Generation: 50, Best fitness: 775.7702246951956
-Generation: 60, Best fitness: 775.7702246951956
-Generation: 70, Best fitness: 773.9702246951956
-Generation: 80, Best fitness: 773.9702246951956
-Generation: 90, Best fitness: 773.9702246951956
+Generation: 30, Best fitness: 357.58918621567597
+Generation: 40, Best fitness: 41.366580213139876
+Generation: 50, Best fitness: 39.56658021313988
+Generation: 60, Best fitness: 39.56658021313988
+Generation: 70, Best fitness: 39.56658021313988
+Generation: 80, Best fitness: 39.56658021313988
+Generation: 90, Best fitness: 39.56658021313988
+Generation: 100, Best fitness: 39.56658021313988
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+C:\Users\David\Desktop\GPSR Research\bingoNASAFork\bingo\symbolic_regression\agraph\evaluation_backend\operator_eval.py:95: RuntimeWarning: overflow encountered in multiply
+  reverse_eval[param2] -= reverse_eval[reverse_index] *\
+C:\Users\David\Desktop\GPSR Research\bingoNASAFork\bingo\symbolic_regression\agraph\evaluation_backend\operator_eval.py:83: RuntimeWarning: overflow encountered in multiply
+  reverse_eval[param1] += reverse_eval[reverse_index]*forward_eval[param2]
+C:\Users\David\Desktop\GPSR Research\bingoNASAFork\bingo\symbolic_regression\agraph\evaluation_backend\operator_eval.py:84: RuntimeWarning: overflow encountered in multiply
+  reverse_eval[param2] += reverse_eval[reverse_index]*forward_eval[param1]
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Generation: 110, Best fitness: 39.56658021313988
+Generation: 120, Best fitness: 39.56658021313988
+Generation: 130, Best fitness: 39.56658021313988
+Generation: 140, Best fitness: 39.56658021313988
+Generation: 150, Best fitness: 39.56658021313988
+Generation: 160, Best fitness: 39.56658021313988
+Generation: 170, Best fitness: 39.56658021313988
+Generation: 180, Best fitness: 39.56658021313988
+Generation: 190, Best fitness: 39.56658021313988
+Generation: 200, Best fitness: 39.56658021313988
+Generation: 210, Best fitness: 39.56658021313988
+Generation: 220, Best fitness: 39.56658021313988
+Generation: 230, Best fitness: 39.56658021313988
+Generation: 240, Best fitness: 39.56658021313988
+Generation: 250, Best fitness: 39.56658021313988
+Generation: 260, Best fitness: 39.56658021313988
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
@@ -946,7 +979,33 @@ C:\Users\David\Desktop\GPSR Research\bingoNASAFork\bingo\symbolic_regression\agr
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Generation: 100, Best fitness: 773.9702246951956
+Generation: 270, Best fitness: 39.56658021313988
+Generation: 280, Best fitness: 39.56658021313988
+Generation: 290, Best fitness: 39.56658021313988
+Generation: 300, Best fitness: 39.56658021313988
+Generation: 310, Best fitness: 39.56658021313988
+Generation: 320, Best fitness: 39.56658021313988
+Generation: 330, Best fitness: 39.56658021313988
+Generation: 340, Best fitness: 39.56658021313988
+Generation: 350, Best fitness: 39.56658021313988
+Generation: 360, Best fitness: 39.56658021313988
+Generation: 370, Best fitness: 39.56658021313988
+Generation: 380, Best fitness: 39.56658021313988
+Generation: 390, Best fitness: 39.56658021313988
+Generation: 400, Best fitness: 39.56658021313988
+Generation: 410, Best fitness: 39.56658021313988
+Generation: 420, Best fitness: 39.56658021313988
+Generation: 430, Best fitness: 39.56658021313988
+Generation: 440, Best fitness: 39.56658021313988
+Generation: 450, Best fitness: 39.56658021313988
+Generation: 460, Best fitness: 39.56658021313988
+Generation: 470, Best fitness: 39.56658021313988
+Generation: 480, Best fitness: 39.56658021313988
+Generation: 490, Best fitness: 39.56658021313988
+Generation: 500, Best fitness: 39.56658021313988
+Generation: 510, Best fitness: 39.56658021313988
+Generation: 520, Best fitness: 39.56658021313988
+Generation: 530, Best fitness: 39.56658021313988
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
@@ -954,8 +1013,8 @@ Generation: 100, Best fitness: 773.9702246951956
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-C:\Users\David\Desktop\GPSR Research\bingoNASAFork\bingo\symbolic_regression\agraph\evaluation_backend\operator_eval.py:84: RuntimeWarning: overflow encountered in multiply
-  reverse_eval[param2] += reverse_eval[reverse_index]*forward_eval[param1]
+C:\Users\David\Desktop\GPSR Research\bingoNASAFork\bingo\symbolic_regression\agraph\evaluation_backend\operator_eval.py:89: RuntimeWarning: overflow encountered in true_divide
+  return forward_eval[param1] / forward_eval[param2]
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
@@ -963,112 +1022,53 @@ C:\Users\David\Desktop\GPSR Research\bingoNASAFork\bingo\symbolic_regression\agr
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Generation: 110, Best fitness: 58.268763338789014
-Generation: 120, Best fitness: 58.268763338789014
-Generation: 130, Best fitness: 58.268763338789014
-Generation: 140, Best fitness: 58.268763338789014
-Generation: 150, Best fitness: 58.268763338789014
-Generation: 160, Best fitness: 58.268763338789014
-</pre></div></div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area stderr docutils container">
-<div class="highlight"><pre>
-C:\Users\David\Desktop\GPSR Research\bingoNASAFork\bingo\symbolic_regression\agraph\evaluation_backend\operator_eval.py:83: RuntimeWarning: overflow encountered in multiply
-  reverse_eval[param1] += reverse_eval[reverse_index]*forward_eval[param2]
-</pre></div></div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-Generation: 170, Best fitness: 58.268763338789014
-Generation: 180, Best fitness: 58.268763338789014
-Generation: 190, Best fitness: 58.268763338789014
-Generation: 200, Best fitness: 58.268763338789014
-Generation: 210, Best fitness: 58.268763338789014
-Generation: 220, Best fitness: 58.000803673833005
-Generation: 230, Best fitness: 58.000803673833005
-Generation: 240, Best fitness: 58.000803673833005
-Generation: 250, Best fitness: 58.000803673833005
-Generation: 260, Best fitness: 58.000803673833005
-Generation: 270, Best fitness: 58.000803673833005
-Generation: 280, Best fitness: 58.000803673833005
-Generation: 290, Best fitness: 58.000803673833005
-Generation: 300, Best fitness: 58.000803673833005
-Generation: 310, Best fitness: 58.000803673833005
-Generation: 320, Best fitness: 58.000803673833005
-Generation: 330, Best fitness: 58.000803673833005
-Generation: 340, Best fitness: 58.000803673833005
-Generation: 350, Best fitness: 58.000803673833005
-Generation: 360, Best fitness: 58.000803673833005
-Generation: 370, Best fitness: 58.000803673833005
-Generation: 380, Best fitness: 58.000803673833005
-Generation: 390, Best fitness: 58.000803673833005
-Generation: 400, Best fitness: 58.000803673833005
-Generation: 410, Best fitness: 58.000803673833005
-Generation: 420, Best fitness: 58.000803673833005
-Generation: 430, Best fitness: 58.000803673833005
-Generation: 440, Best fitness: 58.000803673833005
-Generation: 450, Best fitness: 58.000803673833005
-Generation: 460, Best fitness: 58.000803673833005
-Generation: 470, Best fitness: 58.000803673833005
-Generation: 480, Best fitness: 58.000803673833005
-Generation: 490, Best fitness: 58.000803673833005
-Generation: 500, Best fitness: 58.000803673833005
-Generation: 510, Best fitness: 58.000803673833005
-Generation: 520, Best fitness: 58.000803673833005
-Generation: 530, Best fitness: 58.000803673833005
-Generation: 540, Best fitness: 58.000803673833005
-Generation: 550, Best fitness: 58.000803673833005
-Generation: 560, Best fitness: 58.000803673833005
-Generation: 570, Best fitness: 58.000803673833005
-Generation: 580, Best fitness: 58.000803673833005
-Generation: 590, Best fitness: 58.000803673833005
-Generation: 600, Best fitness: 58.000803673833005
-Generation: 610, Best fitness: 58.000803673833005
-Generation: 620, Best fitness: 58.000803673833005
-Generation: 630, Best fitness: 58.000803673833005
-Generation: 640, Best fitness: 58.000803673833005
-Generation: 650, Best fitness: 58.000803673833005
-Generation: 660, Best fitness: 58.000803673833005
-Generation: 670, Best fitness: 58.000803673833005
-Generation: 680, Best fitness: 58.000803673833005
-Generation: 690, Best fitness: 58.000803673833005
-Generation: 700, Best fitness: 58.000803673833005
-Generation: 710, Best fitness: 58.000803673833005
-Generation: 720, Best fitness: 58.000803673833005
-Generation: 730, Best fitness: 58.000803673833005
-Generation: 740, Best fitness: 58.000803673833005
-Generation: 750, Best fitness: 58.000803673833005
-Generation: 760, Best fitness: 58.000803673833005
-Generation: 770, Best fitness: 46.0888257846543
-Generation: 780, Best fitness: 46.0888257846543
-Generation: 790, Best fitness: 46.0888257846543
-Generation: 800, Best fitness: 46.0888257846543
-Generation: 810, Best fitness: 40.17345282150784
-Generation: 820, Best fitness: 40.17345282150784
-Generation: 830, Best fitness: 40.17345282150784
-Generation: 840, Best fitness: 40.17345282150784
-Generation: 850, Best fitness: 40.17345282150784
-Generation: 860, Best fitness: 40.17345282150784
-Generation: 870, Best fitness: 40.17345282150784
-Generation: 880, Best fitness: 40.17345282150784
-Generation: 890, Best fitness: 40.17345282150784
-Generation: 900, Best fitness: 40.17345282150784
-Generation: 910, Best fitness: 40.17345282150784
-Generation: 920, Best fitness: 40.17345282150784
-Generation: 930, Best fitness: 40.17345282150784
-Generation: 940, Best fitness: 40.17345282150784
-Generation: 950, Best fitness: 40.17345282150784
-Generation: 960, Best fitness: 40.17345282150784
-Generation: 970, Best fitness: 40.17345282150784
-Generation: 980, Best fitness: 40.17345282150784
-Generation: 990, Best fitness: 40.17345282150784
-Generation: 1000, Best fitness: 40.17345282150784
+Generation: 540, Best fitness: 39.56658021313988
+Generation: 550, Best fitness: 39.56658021313988
+Generation: 560, Best fitness: 39.56658021313988
+Generation: 570, Best fitness: 39.56658021313988
+Generation: 580, Best fitness: 39.56658021313988
+Generation: 590, Best fitness: 39.56658021313988
+Generation: 600, Best fitness: 39.56658021313988
+Generation: 610, Best fitness: 39.56658021313988
+Generation: 620, Best fitness: 39.56658021313988
+Generation: 630, Best fitness: 39.56658021313988
+Generation: 640, Best fitness: 39.56658021313988
+Generation: 650, Best fitness: 39.56658021313988
+Generation: 660, Best fitness: 39.56658021313988
+Generation: 670, Best fitness: 39.56658021313988
+Generation: 680, Best fitness: 39.56658021313988
+Generation: 690, Best fitness: 39.56658021313988
+Generation: 700, Best fitness: 39.56658021313988
+Generation: 710, Best fitness: 37.766580213139875
+Generation: 720, Best fitness: 37.766580213139875
+Generation: 730, Best fitness: 37.766580213139875
+Generation: 740, Best fitness: 37.766580213139875
+Generation: 750, Best fitness: 37.766580213139875
+Generation: 760, Best fitness: 37.766580213139875
+Generation: 770, Best fitness: 37.766580213139875
+Generation: 780, Best fitness: 37.766580213139875
+Generation: 790, Best fitness: 37.766580213139875
+Generation: 800, Best fitness: 37.766580213139875
+Generation: 810, Best fitness: 37.766580213139875
+Generation: 820, Best fitness: 37.766580213139875
+Generation: 830, Best fitness: 37.766580213139875
+Generation: 840, Best fitness: 37.766580213139875
+Generation: 850, Best fitness: 37.766580213139875
+Generation: 860, Best fitness: 37.766580213139875
+Generation: 870, Best fitness: 37.766580213139875
+Generation: 880, Best fitness: 37.766580213139875
+Generation: 890, Best fitness: 37.766580213139875
+Generation: 900, Best fitness: 37.766580213139875
+Generation: 910, Best fitness: 37.766580213139875
+Generation: 920, Best fitness: 37.766580213139875
+Generation: 930, Best fitness: 37.766580213139875
+Generation: 940, Best fitness: 37.766580213139875
+Generation: 950, Best fitness: 37.766580213139875
+Generation: 960, Best fitness: 37.766580213139875
+Generation: 970, Best fitness: 37.766580213139875
+Generation: 980, Best fitness: 37.766580213139875
+Generation: 990, Best fitness: 37.766580213139875
+Generation: 1000, Best fitness: 37.766580213139875
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1077,7 +1077,7 @@ Generation: 1000, Best fitness: 40.17345282150784
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-OptimizeResult(success=False, status=2, message=&#39;The maximum number of generational steps (1000) occurred&#39;, ngen=1000, fitness=40.17345282150784, time=28.676959, ea_diagnostics=EaDiagnosticsSummary(beneficial_crossover_rate=0.013263092655717384, detrimental_crossover_rate=0.40421444065695694, beneficial_mutation_rate=0.07423363711681856, detrimental_mutation_rate=0.5872410936205468, beneficial_crossover_mutation_rate=0.01443145060960438, detrimental_crossover_mutation_rate=0.5272455834784773))
+OptimizeResult(success=False, status=2, message=&#39;The maximum number of generational steps (1000) occurred&#39;, ngen=1000, fitness=37.766580213139875, time=31.156803, ea_diagnostics=EaDiagnosticsSummary(beneficial_crossover_rate=0.009910927110776565, detrimental_crossover_rate=0.4479362689750345, beneficial_mutation_rate=0.0696625459405279, detrimental_mutation_rate=0.6262946876044103, beneficial_crossover_mutation_rate=0.013670886075949367, detrimental_crossover_mutation_rate=0.5470886075949367))
 </pre></div></div>
 </div>
 </section>
