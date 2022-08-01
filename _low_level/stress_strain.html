@@ -644,7 +644,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 
 <span class="n">N_POINTS</span> <span class="o">=</span> <span class="mi">100</span>
 
@@ -663,12 +663,12 @@ div.rendered_html tbody tr:hover {
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 Trying to find: sigma =
-[[0.25746648 0.95859445 0.95859445 0.         0.         0.        ]
- [0.95859445 0.25746648 0.95859445 0.         0.         0.        ]
- [0.95859445 0.95859445 0.25746648 0.         0.         0.        ]
- [0.         0.         0.         0.8180574  0.         0.        ]
- [0.         0.         0.         0.         0.8180574  0.        ]
- [0.         0.         0.         0.         0.         0.8180574 ]](epsilon)
+[[0.50371902 0.82401662 0.82401662 0.         0.         0.        ]
+ [0.82401662 0.50371902 0.82401662 0.         0.         0.        ]
+ [0.82401662 0.82401662 0.50371902 0.         0.         0.        ]
+ [0.         0.         0.         0.529151   0.         0.        ]
+ [0.         0.         0.         0.         0.529151   0.        ]
+ [0.         0.         0.         0.         0.         0.529151  ]](epsilon)
 </pre></div></div>
 </div>
 <p>Formally creating the training data is as simple as making epsilon the first variable, and sigma the output:</p>
@@ -817,7 +817,7 @@ finished generating population
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
-<span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 
 <span class="n">MAX_GENS</span> <span class="o">=</span> <span class="mi">500</span>
 <span class="n">FITNESS_THRESHOLD</span> <span class="o">=</span> <span class="mf">1e-6</span>
@@ -833,7 +833,7 @@ finished generating population
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Generation: 0, Best fitness: 0.14313117181713214
+Generation: 0, Best fitness: 9.451247476736424e-10
 </pre></div></div>
 </div>
 </section>
@@ -844,10 +844,11 @@ Generation: 0, Best fitness: 0.14313117181713214
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">set_printoptions</span><span class="p">(</span><span class="n">suppress</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># print w/o scientific notation</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">opt_result</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Result:&quot;</span><span class="p">,</span> <span class="n">opt_result</span><span class="p">)</span>
+
 <span class="n">best_indiv</span> <span class="o">=</span> <span class="n">island</span><span class="o">.</span><span class="n">get_best_individual</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">best_indiv</span><span class="o">.</span><span class="n">get_formatted_string</span><span class="p">(</span><span class="s2">&quot;console&quot;</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">best_indiv</span><span class="o">.</span><span class="n">fitness</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Found individual:&quot;</span><span class="p">,</span> <span class="n">best_indiv</span><span class="o">.</span><span class="n">get_formatted_string</span><span class="p">(</span><span class="s2">&quot;console&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;with fitness:&quot;</span><span class="p">,</span> <span class="n">best_indiv</span><span class="o">.</span><span class="n">fitness</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -856,19 +857,14 @@ Generation: 0, Best fitness: 0.14313117181713214
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-OptimizeResult(success=True, status=0, message=&#39;Absolute convergence occurred with best fitness &lt; 1e-06&#39;, ngen=1, fitness=5.751358118942471e-10, time=29.747764, ea_diagnostics=EaDiagnosticsSummary(beneficial_crossover_rate=0.0, detrimental_crossover_rate=0.5, beneficial_mutation_rate=0.35294117647058826, detrimental_mutation_rate=0.4411764705882353, beneficial_crossover_mutation_rate=0.3333333333333333, detrimental_crossover_mutation_rate=0.16666666666666666))
-([[-0.29626349 -1.27113864  3.04207341  0.00000001 -0.00000001 -0.        ]
- [ 1.20968297  1.80166261 -1.5366743  -0.          0.          0.        ]
- [ 0.5612518   0.94414731 -0.03072784 -0.         -0.          0.        ]
- [-0.         -0.          0.          1.35248166 -1.40339667  0.45332252]
- [-0.         -0.          0.          0.64903869 -1.12862712  0.65672562]
- [-0.         -0.          0.         -0.22123433  0.69300928  0.68061072]])(([[-0.29626349 -1.27113864  3.04207341  0.00000001 -0.00000001 -0.        ]
- [ 1.20968297  1.80166261 -1.5366743  -0.          0.          0.        ]
- [ 0.5612518   0.94414731 -0.03072784 -0.         -0.          0.        ]
- [-0.         -0.          0.          1.35248166 -1.40339667  0.45332252]
- [-0.         -0.          0.          0.64903869 -1.12862712  0.65672562]
- [-0.         -0.          0.         -0.22123433  0.69300928  0.68061072]])(X_0))
-5.751358118942471e-10
+Result: OptimizeResult(success=True, status=0, message=&#39;Absolute convergence occurred with best fitness &lt; 1e-06&#39;, ngen=0, fitness=9.451247476736424e-10, time=37.106921, ea_diagnostics=EaDiagnosticsSummary(beneficial_crossover_rate=nan, detrimental_crossover_rate=nan, beneficial_mutation_rate=nan, detrimental_mutation_rate=nan, beneficial_crossover_mutation_rate=nan, detrimental_crossover_mutation_rate=nan))
+Found individual: ([[ 0.50371902  0.82401662  0.82401662  0.         -0.          0.        ]
+ [ 0.82401662  0.50371902  0.82401662  0.         -0.         -0.        ]
+ [ 0.82401661  0.82401661  0.50371902 -0.         -0.          0.00000001]
+ [ 0.         -0.         -0.          0.529151    0.         -0.        ]
+ [ 0.          0.         -0.         -0.          0.529151    0.        ]
+ [ 0.         -0.          0.         -0.          0.          0.529151  ]])(X_0)
+with fitness: 9.451247476736424e-10
 </pre></div></div>
 </div>
 </section>
