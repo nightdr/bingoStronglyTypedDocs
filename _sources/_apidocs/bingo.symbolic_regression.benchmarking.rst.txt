@@ -1,0 +1,45 @@
+bingo.symbolic\_regression.benchmarking package
+===============================================
+
+Submodules
+----------
+
+bingo.symbolic\_regression.benchmarking.benchmark module
+--------------------------------------------------------
+
+.. automodule:: bingo.symbolic_regression.benchmarking.benchmark
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bingo.symbolic\_regression.benchmarking.benchmark\_definitions module
+---------------------------------------------------------------------
+
+.. automodule:: bingo.symbolic_regression.benchmarking.benchmark_definitions
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bingo.symbolic\_regression.benchmarking.benchmark\_suite module
+---------------------------------------------------------------
+
+.. automodule:: bingo.symbolic_regression.benchmarking.benchmark_suite
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bingo.symbolic\_regression.benchmarking.benchmark\_test module
+--------------------------------------------------------------
+
+.. automodule:: bingo.symbolic_regression.benchmarking.benchmark_test
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: bingo.symbolic_regression.benchmarking
+   :members:
+   :undoc-members:
+   :show-inheritance:

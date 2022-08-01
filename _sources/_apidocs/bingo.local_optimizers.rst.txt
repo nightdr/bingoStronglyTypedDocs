@@ -1,0 +1,45 @@
+bingo.local\_optimizers package
+===============================
+
+Submodules
+----------
+
+bingo.local\_optimizers.continuous\_local\_opt\_md module
+---------------------------------------------------------
+
+.. automodule:: bingo.local_optimizers.continuous_local_opt_md
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bingo.local\_optimizers.local\_opt\_fitness module
+--------------------------------------------------
+
+.. automodule:: bingo.local_optimizers.local_opt_fitness
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bingo.local\_optimizers.local\_optimizer module
+-----------------------------------------------
+
+.. automodule:: bingo.local_optimizers.local_optimizer
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bingo.local\_optimizers.scipy\_optimizer module
+-----------------------------------------------
+
+.. automodule:: bingo.local_optimizers.scipy_optimizer
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: bingo.local_optimizers
+   :members:
+   :undoc-members:
+   :show-inheritance:

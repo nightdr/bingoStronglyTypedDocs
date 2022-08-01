@@ -1,0 +1,572 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>bingo.variation package &#8212; Bingo 1.0 documentation</title>
+<script>
+  document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
+</script>
+
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+
+
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="bingo.util package" href="bingo.util.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="None">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="light">
+    <div class="bd-header-announcement container-fluid" id="banner">
+      
+
+    </div>
+
+    
+    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
+
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+    <img src="../_static/transparent_logo.png" class="logo__image only-light" alt="Logo image">
+    <img src="../_static/transparent_logo.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="fas fa-bars"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../installation.html">
+  Installation Guide
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../get_started.html">
+  Get Started
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../high_level.html">
+  High-Level User Guide
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../low_level.html">
+  Low-Level User Guide
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="modules.html">
+  API Docs
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/nasa/bingo" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="bd-container container-xl">
+      <div class="bd-container__inner row">
+          
+
+<!-- Only show if we have sidebars configured, else just a small margin  -->
+<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
+  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="bingo.html">
+   bingo package
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="bingo.chromosomes.html">
+     bingo.chromosomes package
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bingo.evaluation.html">
+     bingo.evaluation package
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bingo.evolutionary_algorithms.html">
+     bingo.evolutionary_algorithms package
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bingo.evolutionary_optimizers.html">
+     bingo.evolutionary_optimizers package
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bingo.local_optimizers.html">
+     bingo.local_optimizers package
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bingo.selection.html">
+     bingo.selection package
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bingo.stats.html">
+     bingo.stats package
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="bingo.symbolic_regression.html">
+     bingo.symbolic_regression package
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="bingo.symbolic_regression.agraph.html">
+       bingo.symbolic_regression.agraph package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+      <label for="toctree-checkbox-3">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="bingo.symbolic_regression.agraph.evaluation_backend.html">
+         bingo.symbolic_regression.agraph.evaluation_backend package
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="bingo.symbolic_regression.agraph.simplification_backend.html">
+         bingo.symbolic_regression.agraph.simplification_backend package
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="bingo.symbolic_regression.benchmarking.html">
+       bingo.symbolic_regression.benchmarking package
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="bingo.util.html">
+     bingo.util package
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     bingo.variation package
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+  </div>
+</nav>
+  </div>
+  <div class="sidebar-end-items">
+  </div>
+</div>
+
+
+          
+
+
+<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
+  
+    
+    <div class="toc-item">
+      
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#submodules">
+   Submodules
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-bingo.variation.add_random_individuals">
+   bingo.variation.add_random_individuals module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-bingo.variation.var_and">
+   bingo.variation.var_and module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-bingo.variation.var_or">
+   bingo.variation.var_or module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-bingo.variation.variation">
+   bingo.variation.variation module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-bingo.variation">
+   Module contents
+  </a>
+ </li>
+</ul>
+
+</nav>
+    </div>
+    
+    <div class="toc-item">
+      
+    </div>
+    
+  
+</div>
+
+
+          
+          
+          <div class="bd-content col-12 col-md-9 col-xl-7">
+              
+              <article class="bd-article" role="main">
+                
+  <section id="bingo-variation-package">
+<h1>bingo.variation package<a class="headerlink" href="#bingo-variation-package" title="Permalink to this headline">#</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="module-bingo.variation.add_random_individuals">
+<span id="bingo-variation-add-random-individuals-module"></span><h2>bingo.variation.add_random_individuals module<a class="headerlink" href="#module-bingo.variation.add_random_individuals" title="Permalink to this headline">#</a></h2>
+<p>variation that adds random individual(s)</p>
+<p>This module wraps a variation in order to supply random individual(s) to the
+offspring after the variation is carried out.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="bingo.variation.add_random_individuals.AddRandomIndividuals">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bingo.variation.add_random_individuals.</span></span><span class="sig-name descname"><span class="pre">AddRandomIndividuals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">variation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chromosome_generator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_rand_indvs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bingo.variation.add_random_individuals.AddRandomIndividuals" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bingo.variation.variation.Variation" title="bingo.variation.variation.Variation"><code class="xref py py-class docutils literal notranslate"><span class="pre">bingo.variation.variation.Variation</span></code></a></p>
+<p>A variation object that takes in an implementation of variation that
+adds a random individual to the population before performing variation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>variation</strong> (<em>variation</em>) – variation object that performs the variation among individuals</p></li>
+<li><p><strong>chromosome_generator</strong> (<a class="reference internal" href="bingo.chromosomes.html#bingo.chromosomes.generator.Generator" title="bingo.chromosomes.generator.Generator"><em>Generator</em></a>) – Generator for random individual</p></li>
+<li><p><strong>num_rand_indvs</strong> (<em>int</em>) – The number of random individuals to generate per call</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-bingo.variation.var_and">
+<span id="bingo-variation-var-and-module"></span><h2>bingo.variation.var_and module<a class="headerlink" href="#module-bingo.variation.var_and" title="Permalink to this headline">#</a></h2>
+<p>variation where crossover and mutation may co-occur</p>
+<p>var_and.py is similar to the function of the same name in DEAP.  It allows for
+definition of a variation by crossover and mutation probabilities. Offspring
+may be the result of both crossover :and: mutation, hence the name.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="bingo.variation.var_and.VarAnd">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bingo.variation.var_and.</span></span><span class="sig-name descname"><span class="pre">VarAnd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">crossover</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mutation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crossover_probability</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mutation_probability</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bingo.variation.var_and.VarAnd" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bingo.variation.variation.Variation" title="bingo.variation.variation.Variation"><code class="xref py py-class docutils literal notranslate"><span class="pre">bingo.variation.variation.Variation</span></code></a></p>
+<p>variation where crossover and mutation may co-occur</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>crossover</strong> (<a class="reference internal" href="bingo.chromosomes.html#bingo.chromosomes.crossover.Crossover" title="bingo.chromosomes.crossover.Crossover"><em>Crossover</em></a>) – Crossover function class used in the variation</p></li>
+<li><p><strong>mutation</strong> (<a class="reference internal" href="bingo.chromosomes.html#bingo.chromosomes.mutation.Mutation" title="bingo.chromosomes.mutation.Mutation"><em>Mutation</em></a>) – Mutation function class used in the variation</p></li>
+<li><p><strong>crossover_probability</strong> (<em>float</em>) – Probability that crossover will occur on an individual</p></li>
+<li><p><strong>mutation_probability</strong> (<em>float</em>) – Probability that mutation will occur on an individual</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bingo.variation.var_and.VarAnd.crossover_offspring">
+<span class="sig-name descname"><span class="pre">crossover_offspring</span></span><a class="headerlink" href="#bingo.variation.var_and.VarAnd.crossover_offspring" title="Permalink to this definition">#</a></dt>
+<dd><p>list indicating whether the corresponding member of the last offspring
+was a result of crossover</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array of bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bingo.variation.var_and.VarAnd.mutation_offspring">
+<span class="sig-name descname"><span class="pre">mutation_offspring</span></span><a class="headerlink" href="#bingo.variation.var_and.VarAnd.mutation_offspring" title="Permalink to this definition">#</a></dt>
+<dd><p>list indicating whether the corresponding member of the last offspring
+was a result of mutation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array of bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bingo.variation.var_and.VarAnd.offspring_parents">
+<span class="sig-name descname"><span class="pre">offspring_parents</span></span><a class="headerlink" href="#bingo.variation.var_and.VarAnd.offspring_parents" title="Permalink to this definition">#</a></dt>
+<dd><p>list indicating the parents (by index in the population) of the
+corresponding member of the last offspring</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list of list of int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-bingo.variation.var_or">
+<span id="bingo-variation-var-or-module"></span><h2>bingo.variation.var_or module<a class="headerlink" href="#module-bingo.variation.var_or" title="Permalink to this headline">#</a></h2>
+<p>variation where crossover, mutation, or replication may occur</p>
+<p>var_or.py allows for definition of a variation by crossover, replication, and
+mutation probabilities. Offspring may be the result of either crossover,
+replication :or: mutation, hence the name. Only one may occur at a time.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="bingo.variation.var_or.VarOr">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bingo.variation.var_or.</span></span><span class="sig-name descname"><span class="pre">VarOr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">crossover</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mutation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crossover_probability</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mutation_probability</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bingo.variation.var_or.VarOr" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bingo.variation.variation.Variation" title="bingo.variation.variation.Variation"><code class="xref py py-class docutils literal notranslate"><span class="pre">bingo.variation.variation.Variation</span></code></a></p>
+<p>variation where either crossover, mutation, or
+replication may occur</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>crossover</strong> (<a class="reference internal" href="bingo.chromosomes.html#bingo.chromosomes.crossover.Crossover" title="bingo.chromosomes.crossover.Crossover"><em>Crossover</em></a>) – Crossover function class used in variation</p></li>
+<li><p><strong>mutation</strong> (<a class="reference internal" href="bingo.chromosomes.html#bingo.chromosomes.mutation.Mutation" title="bingo.chromosomes.mutation.Mutation"><em>Mutation</em></a>) – Mutation function class used in variation</p></li>
+<li><p><strong>crossover_probability</strong> (<em>float</em>) – Probability that crossover will occur on an individual</p></li>
+<li><p><strong>mutation_probability</strong> (<em>float</em>) – Probability that mutation will occur on an individual</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bingo.variation.var_or.VarOr.crossover_offspring">
+<span class="sig-name descname"><span class="pre">crossover_offspring</span></span><a class="headerlink" href="#bingo.variation.var_or.VarOr.crossover_offspring" title="Permalink to this definition">#</a></dt>
+<dd><p>list indicating whether the corresponding member of the last offspring
+was a result of crossover</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array of bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bingo.variation.var_or.VarOr.mutation_offspring">
+<span class="sig-name descname"><span class="pre">mutation_offspring</span></span><a class="headerlink" href="#bingo.variation.var_or.VarOr.mutation_offspring" title="Permalink to this definition">#</a></dt>
+<dd><p>list indicating whether the corresponding member of the last offspring
+was a result of mutation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>array of bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bingo.variation.var_or.VarOr.offspring_parents">
+<span class="sig-name descname"><span class="pre">offspring_parents</span></span><a class="headerlink" href="#bingo.variation.var_or.VarOr.offspring_parents" title="Permalink to this definition">#</a></dt>
+<dd><p>list indicating the parents (by index in the population) of the
+corresponding member of the last offspring</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list of list of int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-bingo.variation.variation">
+<span id="bingo-variation-variation-module"></span><h2>bingo.variation.variation module<a class="headerlink" href="#module-bingo.variation.variation" title="Permalink to this headline">#</a></h2>
+<p>The genetic operation of variation.</p>
+<p>This module defines the basis of variation in bingo evolutionary analyses.
+Generally this consists of crossover, mutation and replication.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="bingo.variation.variation.Variation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bingo.variation.variation.</span></span><span class="sig-name descname"><span class="pre">Variation</span></span><a class="headerlink" href="#bingo.variation.variation.Variation" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A variator of individuals.</p>
+<p>An abstract base class for the variation of genetic populations
+(list chromosomes) in bingo.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bingo.variation.variation.Variation.crossover_offspring">
+<span class="sig-name descname"><span class="pre">crossover_offspring</span></span><a class="headerlink" href="#bingo.variation.variation.Variation.crossover_offspring" title="Permalink to this definition">#</a></dt>
+<dd><p>list indicating whether the corresponding member of the last offspring
+was a result of crossover</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list of bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bingo.variation.variation.Variation.mutation_offspring">
+<span class="sig-name descname"><span class="pre">mutation_offspring</span></span><a class="headerlink" href="#bingo.variation.variation.Variation.mutation_offspring" title="Permalink to this definition">#</a></dt>
+<dd><p>list indicating whether the corresponding member of the last offspring
+was a result of mutation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list of bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bingo.variation.variation.Variation.offspring_parents">
+<span class="sig-name descname"><span class="pre">offspring_parents</span></span><a class="headerlink" href="#bingo.variation.variation.Variation.offspring_parents" title="Permalink to this definition">#</a></dt>
+<dd><p>list indicating the parents (by index in the population) of the
+corresponding member of the last offspring</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list of list of int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-bingo.variation">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-bingo.variation" title="Permalink to this headline">#</a></h2>
+</section>
+</section>
+
+
+              </article>
+              
+
+              
+              <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+  <a class='left-prev' id="prev-link" href="bingo.util.html" title="previous page">
+      <i class="fas fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">previous</p>
+          <p class="prev-next-title">bingo.util package</p>
+      </div>
+  </a>
+</div>
+              </footer>
+              
+          </div>
+          
+      </div>
+    </div>
+
+  
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
+
+<footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    <p class="copyright">
+    &copy; Copyright 2022, United States Government as represented by the Administrator of the National Aeronautics and Space Administration.<br>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+</p>
+  </div>
+  
+</div>
+</footer>
+  </body>
+</html>

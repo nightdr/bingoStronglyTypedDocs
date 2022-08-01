@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Bingo’s Documentation &#8212; Bingo 1.0 documentation</title>
+    <title>Low-Level User Guide &#8212; Bingo 1.0 documentation</title>
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
   document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
@@ -41,7 +41,8 @@
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Installation Guide" href="installation.html" />
+    <link rel="next" title="Bingo Tutorial 1: One Max Problem" href="_low_level/tutorial_1.html" />
+    <link rel="prev" title="Using the Scikit-Learn Wrapper" href="_high_level/sklearn_wrapper.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="None">
   </head>
@@ -62,7 +63,7 @@
   
 
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="index.html">
   
   
   
@@ -103,8 +104,8 @@
  </a>
 </li>
 
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="low_level.html">
+<li class="toctree-l1 current active nav-item">
+ <a class="current reference internal nav-link" href="#">
   Low-Level User Guide
  </a>
 </li>
@@ -149,7 +150,51 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
-    
+    <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tutorials:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="_low_level/tutorial_1.html">
+   Bingo Tutorial 1: One Max Problem
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="_low_level/tutorial_2.html">
+   Bingo Tutorial 2: Zero Min Problem
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="_low_level/tutorial_3.html">
+   Bingo Tutorial 3: Archipelagos and Logging
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="_low_level/tutorial_4.html">
+   Bingo Tutorial 4: Symbolic Regression
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Other:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="_low_level/physics_fitness.html">
+   Physics-Informed Fitness
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="_low_level/stress_strain.html">
+   Stress-Strain Using Strongly-Typed GPSR
+  </a>
+ </li>
+</ul>
+
   </div>
 </nav>
   </div>
@@ -186,71 +231,23 @@
               
               <article class="bd-article" role="main">
                 
-  <section id="bingo-s-documentation">
-<h1>Bingo’s Documentation<a class="headerlink" href="#bingo-s-documentation" title="Permalink to this headline">#</a></h1>
-<p>Bingo is a flexible Python library for
-symbolic regression via genetic programming.</p>
+  <section id="low-level-user-guide">
+<h1>Low-Level User Guide<a class="headerlink" href="#low-level-user-guide" title="Permalink to this headline">#</a></h1>
 <div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="_low_level/tutorial_1.html">Bingo Tutorial 1: One Max Problem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_low_level/tutorial_2.html">Bingo Tutorial 2: Zero Min Problem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_low_level/tutorial_3.html">Bingo Tutorial 3: Archipelagos and Logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_low_level/tutorial_4.html">Bingo Tutorial 4: Symbolic Regression</a></li>
+</ul>
 </div>
-<div class="sphinx-bs container pb-4 docutils">
-<div class="row docutils">
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-3 docutils">
-<div class="card w-100 shadow intro-card text-center bg-white docutils">
-<img alt="img-top" class="card-img-top w-25 align-center my-4" src="_images/download_icon.svg" /><div class="card-header bg-white font-weight-bold docutils">
-<p class="card-text">Get Started</p>
-</div>
-<div class="card-body bg-white docutils">
-<p class="card-text">Install Bingo and do a quick example.</p>
-</div>
-<div class="card-footer bg-white docutils">
-<p class="card-text"><a class="sphinx-bs btn text-wrap btn-block btn-primary reference external" href="get_started.html"><span>To the Get Started Guide</span></a></p>
-</div>
-</div>
-</div>
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-3 docutils">
-<div class="card w-100 shadow intro-card text-center bg-white docutils">
-<img alt="img-top" class="card-img-top w-25 align-center my-4" src="_images/running.svg" /><div class="card-header bg-white font-weight-bold docutils">
-<p class="card-text">High-Level Concepts</p>
-</div>
-<div class="card-body bg-white docutils">
-<p class="card-text">Get an understanding of how Bingo works at a high level including
-basic concepts like symbolic regression, genetic programming etc.</p>
-</div>
-<div class="card-footer bg-white docutils">
-<p class="card-text"><a class="sphinx-bs btn text-wrap btn-block btn-primary reference external" href="high_level.html"><span>To the High-Level User Guide</span></a></p>
-</div>
-</div>
-</div>
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-3 docutils">
-<div class="card w-100 shadow intro-card text-center bg-white docutils">
-<img alt="img-top" class="card-img-top w-25 align-center my-4" src="_images/brackets.svg" /><div class="card-header bg-white font-weight-bold docutils">
-<p class="card-text">Low-Level Concepts</p>
-</div>
-<div class="card-body bg-white docutils">
-<p class="card-text">Looking to develop your own components of GPSR or get an
-in-depth understand of Bingo’s concepts? See the low-level user guide
-for detailed descriptions and examples of Bingo’s concepts.</p>
-</div>
-<div class="card-footer bg-white docutils">
-<p class="card-text"><a class="sphinx-bs btn text-wrap btn-block btn-primary reference external" href="low_level.html"><span>To the Low-Level User Guide</span></a></p>
-</div>
-</div>
-</div>
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-3 docutils">
-<div class="card w-100 shadow intro-card text-center bg-white docutils">
-<img alt="img-top" class="card-img-top w-25 align-center my-4" src="_images/open_book.svg" /><div class="card-header bg-white font-weight-bold docutils">
-<p class="card-text">API Docs</p>
-</div>
-<div class="card-body bg-white docutils">
-<p class="card-text">Descriptions of how to use Bingo’s classes and methods including
-their inputs, outputs, etc.</p>
-</div>
-<div class="card-footer bg-white docutils">
-<p class="card-text"><a class="sphinx-bs btn text-wrap btn-block btn-primary reference external" href="_apidocs/modules.html"><span>To the API Docs</span></a></p>
-</div>
-</div>
-</div>
-</div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Other:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="_low_level/physics_fitness.html">Physics-Informed Fitness</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_low_level/stress_strain.html">Stress-Strain Using Strongly-Typed GPSR</a></li>
+</ul>
 </div>
 </section>
 
@@ -262,10 +259,17 @@ their inputs, outputs, etc.</p>
               <footer class="bd-footer-article">
                   <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-  <a class='right-next' id="next-link" href="installation.html" title="next page">
+  <a class='left-prev' id="prev-link" href="_high_level/sklearn_wrapper.html" title="previous page">
+      <i class="fas fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">previous</p>
+          <p class="prev-next-title">Using the Scikit-Learn Wrapper</p>
+      </div>
+  </a>
+  <a class='right-next' id="next-link" href="_low_level/tutorial_1.html" title="next page">
   <div class="prev-next-info">
       <p class="prev-next-subtitle">next</p>
-      <p class="prev-next-title">Installation Guide</p>
+      <p class="prev-next-title">Bingo Tutorial 1: One Max Problem</p>
   </div>
   <i class="fas fa-angle-right"></i>
   </a>

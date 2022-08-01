@@ -4,9 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-    <title>Bingo’s Documentation &#8212; Bingo 1.0 documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search &#8212; Bingo 1.0 documentation</title>
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
   document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
@@ -32,6 +31,7 @@
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
 
+    
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
@@ -39,11 +39,15 @@
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Installation Guide" href="installation.html" />
+    <link rel="search" title="Search" href="#" />
+  <script src="searchindex.js" defer></script>
+  
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="None">
+
   </head>
   
   
@@ -62,7 +66,7 @@
   
 
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="index.html">
   
   
   
@@ -144,7 +148,7 @@
 
 <!-- Only show if we have sidebars configured, else just a small margin  -->
 <div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
-  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="#" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -163,20 +167,6 @@
 
 <div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
   
-    
-    <div class="toc-item">
-      
-
-<nav id="bd-toc-nav">
-    
-</nav>
-    </div>
-    
-    <div class="toc-item">
-      
-    </div>
-    
-  
 </div>
 
 
@@ -186,74 +176,36 @@
               
               <article class="bd-article" role="main">
                 
-  <section id="bingo-s-documentation">
-<h1>Bingo’s Documentation<a class="headerlink" href="#bingo-s-documentation" title="Permalink to this headline">#</a></h1>
-<p>Bingo is a flexible Python library for
-symbolic regression via genetic programming.</p>
-<div class="toctree-wrapper compound">
-</div>
-<div class="sphinx-bs container pb-4 docutils">
-<div class="row docutils">
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-3 docutils">
-<div class="card w-100 shadow intro-card text-center bg-white docutils">
-<img alt="img-top" class="card-img-top w-25 align-center my-4" src="_images/download_icon.svg" /><div class="card-header bg-white font-weight-bold docutils">
-<p class="card-text">Get Started</p>
-</div>
-<div class="card-body bg-white docutils">
-<p class="card-text">Install Bingo and do a quick example.</p>
-</div>
-<div class="card-footer bg-white docutils">
-<p class="card-text"><a class="sphinx-bs btn text-wrap btn-block btn-primary reference external" href="get_started.html"><span>To the Get Started Guide</span></a></p>
-</div>
-</div>
-</div>
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-3 docutils">
-<div class="card w-100 shadow intro-card text-center bg-white docutils">
-<img alt="img-top" class="card-img-top w-25 align-center my-4" src="_images/running.svg" /><div class="card-header bg-white font-weight-bold docutils">
-<p class="card-text">High-Level Concepts</p>
-</div>
-<div class="card-body bg-white docutils">
-<p class="card-text">Get an understanding of how Bingo works at a high level including
-basic concepts like symbolic regression, genetic programming etc.</p>
-</div>
-<div class="card-footer bg-white docutils">
-<p class="card-text"><a class="sphinx-bs btn text-wrap btn-block btn-primary reference external" href="high_level.html"><span>To the High-Level User Guide</span></a></p>
-</div>
-</div>
-</div>
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-3 docutils">
-<div class="card w-100 shadow intro-card text-center bg-white docutils">
-<img alt="img-top" class="card-img-top w-25 align-center my-4" src="_images/brackets.svg" /><div class="card-header bg-white font-weight-bold docutils">
-<p class="card-text">Low-Level Concepts</p>
-</div>
-<div class="card-body bg-white docutils">
-<p class="card-text">Looking to develop your own components of GPSR or get an
-in-depth understand of Bingo’s concepts? See the low-level user guide
-for detailed descriptions and examples of Bingo’s concepts.</p>
-</div>
-<div class="card-footer bg-white docutils">
-<p class="card-text"><a class="sphinx-bs btn text-wrap btn-block btn-primary reference external" href="low_level.html"><span>To the Low-Level User Guide</span></a></p>
-</div>
-</div>
-</div>
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-3 docutils">
-<div class="card w-100 shadow intro-card text-center bg-white docutils">
-<img alt="img-top" class="card-img-top w-25 align-center my-4" src="_images/open_book.svg" /><div class="card-header bg-white font-weight-bold docutils">
-<p class="card-text">API Docs</p>
-</div>
-<div class="card-body bg-white docutils">
-<p class="card-text">Descriptions of how to use Bingo’s classes and methods including
-their inputs, outputs, etc.</p>
-</div>
-<div class="card-footer bg-white docutils">
-<p class="card-text"><a class="sphinx-bs btn text-wrap btn-block btn-primary reference external" href="_apidocs/modules.html"><span>To the API Docs</span></a></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
+  <h1 id="search-documentation">Search</h1>
+  
+  <noscript>
+  <div class="admonition warning">
+  <p>
+    Please activate JavaScript to enable the search
+    functionality.
+  </p>
+  </div>
+  </noscript>
+  
+  
+  <p>
+    Searching for multiple words only shows matches that contain
+    all words.
+  </p>
+  
+  
+  <form action="" method="get">
+    <input type="text" name="q" aria-labelledby="search-documentation" value="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+    <input type="submit" value="search" />
+    <span id="search-progress" style="padding-left: 10px"></span>
+  </form>
+  
+  
+  
+  <div id="search-results">
+  
+  </div>
+  
 
               </article>
               
@@ -262,13 +214,6 @@ their inputs, outputs, etc.</p>
               <footer class="bd-footer-article">
                   <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-  <a class='right-next' id="next-link" href="installation.html" title="next page">
-  <div class="prev-next-info">
-      <p class="prev-next-subtitle">next</p>
-      <p class="prev-next-title">Installation Guide</p>
-  </div>
-  <i class="fas fa-angle-right"></i>
-  </a>
 </div>
               </footer>
               
